@@ -5,7 +5,6 @@ body {
 }
 
 body {
-    position: relative;
     display: flex;
     flex-direction: column;
     font-size: 13px;
@@ -17,7 +16,7 @@ a {
     text-decoration: none;
 }
 
-.top-nav {
+.header-top {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,18 +24,18 @@ a {
     padding-left: 10px;
 }
 
-.top-nav a {
+.header-top .header-top-item {
     font-size: 13px;
     font-weight: 400;
     color: rgba(0, 0, 0, .75);
     margin-left: 20px;
 }
 
-.top-nav .more {
+.header-top .header-top-item-more {
     position: relative;
 }
 
-.top-nav .more-arr {
+.header-top .header-top-item-more-arr {
     display: inline-block;
     position: absolute;
     top: 6px;
@@ -49,22 +48,21 @@ a {
     transition: all 0.3s;
 }
 
-
-.top-nav .more-arr:hover {
+.header-top .header-top-item:hover {
     color: #ff5a34;
+}
+
+.header-top .header-top-item-more:hover .header-top-item-more-arr {
+    border-top: 4px solid #ff5a34;
     transform: rotate(180deg);
 }
 
-.top-nav a:hover {
+.header-top .header-top-item-webpage {
     color: #ff5a34;
 }
 
-.top-nav .webpage {
-    display: inline-block;
-    color: #ff5a34;
-}
 
-.user-nav {
+.header-user {
     position: absolute;
     right: 0;
     top: 0;
@@ -73,13 +71,20 @@ a {
     text-align: right;
 }
 
-.user-nav .ariatheme {
-    position: relative;
-    top: 3px;
-    margin: 0 4px;
+.header-user .header-user-item-temperature {
+    padding-left: 25px;
 }
 
-.user-nav .line {
+.header-user .header-user-weather {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    top: -15px;
+    left: 63px;
+
+}
+
+.header-user .header-user-item-line {
     display: inline-block;
     position: relative;
     top: 2px;
@@ -91,12 +96,12 @@ a {
     overflow: hidden;
 }
 
-.Location,
-.temperature {
+.header-user-item-Location,
+.header-user-item-temperature {
     color: rgba(0, 0, 0, .75);
 }
 
-.user-nav .accessibility {
+.header-user .header-user-item-accessibility {
     color: #000;
     margin-left: 8px;
     opacity: .75;
@@ -108,12 +113,12 @@ a {
     margin: 200px;
 }
 
-.page-mainer form {
+.page-mainer .page-mainer-container {
     display: flex;
     justify-content: center;
 }
 
-.form-container .form-search {
+.page-mainer-container .page-mainer-container-search {
     display: inline-block;
     width: 489px;
     height: 42px;
@@ -125,7 +130,7 @@ a {
 
 }
 
-.form-container .form-btn {
+.page-mainer-container .page-mainer-container-btn {
     display: inline-block;
     width: 99px;
     height: 44px;
@@ -137,14 +142,13 @@ a {
     cursor: pointer;
 }
 
-.form-container .form-btn:hover {
+.page-mainer-container .page-mainer-container-btn:hover {
     opacity: 0.8;
 }
 
 .page-footer {
     text-align: center;
     padding-bottom: 28px;
-
 }
 
 .page-footer .footer-info {
@@ -153,27 +157,31 @@ a {
     color: rgba(0, 0, 0, .5);
 }
 
-.footer-info .interval {
+.footer-info .footer-info-interval {
     margin: 0 5px;
 }
 
-.page-footer .footer-info a {
+.page-footer .footer-info-item {
     color: rgba(0, 0, 0, .5);
 }
 
-.page-footer .footer-info-top .sogou-inputting {
+.page-footer .footer-info-item:hover {
+    color: rgba(0, 0, 0, .9);
+}
+
+.footer-info-inputting,
+.footer-info-browser,
+.footer-info-navigation {
     color: rgba(0, 0, 0, .7);
 }
 
-.page-footer .footer-info-top .sogou-browser {
-    color: rgba(0, 0, 0, .7);
+.footer-info-inputting:hover,
+.footer-info-browser:hover,
+.footer-info-navigation:hover {
+    color: rgba(0, 0, 0, .9);
 }
 
-.page-footer .footer-info-top .sogou-navigation {
-    color: rgba(0, 0, 0, .7);
-}
-
-.page-footer .footer-info-top i {
+.icon {
     display: inline-block;
     position: relative;
     width: 13px;
@@ -183,15 +191,27 @@ a {
     background: url(../img/ico.gif) no-repeat;
 }
 
-.page-footer .footer-info-top .browser {
+.icon-browser {
     background-position: 0 -29px;
 }
 
-.page-footer .footer-info-top .navigation {
+.icon-navigation {
     background-position: 0 -57px;
 }
 
-.page-footer .footer-info-top .line {
+.footer-info-inputting:hover .icon-inputting {
+    background-position: 0 -15px;
+}
+
+.footer-info-browser:hover .icon-browser {
+    background-position: 0 -43px;
+}
+
+.footer-info-navigation:hover .icon-navigation {
+    background-position: 0 -71px;
+}
+
+.page-footer .footer-info-line {
     display: inline-block;
     position: relative;
     top: 2px;
@@ -204,11 +224,11 @@ a {
 }
 
 
-.page-footer .Security {
+.page-footer .footer-info-item-security {
     position: relative;
 }
 
-.page-footer .Security-older {
+.page-footer .security-older {
     position: absolute;
     top: -25px;
     right: -90px;
@@ -221,7 +241,7 @@ a {
     margin: 0;
 }
 
-.page-footer .Security-badge {
+.page-footer .security-badge {
     display: inline-block;
     position: relative;
     width: 13px;
