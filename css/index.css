@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 13px;
+    min-width: 1633px;
     font-family: arial, 'pingfang sc', stheiti, 'microsoft yahei', sans-serif;
 }
 
@@ -31,11 +32,11 @@ a {
     margin-left: 20px;
 }
 
-.top-nav a:last-child {
+.top-nav .more {
     position: relative;
 }
 
-.top-nav .m-arr {
+.top-nav .more-arr {
     display: inline-block;
     position: absolute;
     top: 6px;
@@ -48,7 +49,9 @@ a {
     transition: all 0.3s;
 }
 
-.top-nav .m-arr:hover {
+
+.top-nav .more-arr:hover {
+    color: #ff5a34;
     transform: rotate(180deg);
 }
 
@@ -56,7 +59,7 @@ a {
     color: #ff5a34;
 }
 
-.top-nav a:first-child {
+.top-nav .webpage {
     display: inline-block;
     color: #ff5a34;
 }
@@ -65,7 +68,7 @@ a {
     position: absolute;
     right: 0;
     top: 0;
-    padding-top: 20px;
+    padding-top: 12px;
     padding-right: 20px;
     text-align: right;
 }
@@ -88,11 +91,12 @@ a {
     overflow: hidden;
 }
 
-.user-nav span {
+.Location,
+.temperature {
     color: rgba(0, 0, 0, .75);
 }
 
-.user-nav a {
+.user-nav .accessibility {
     color: #000;
     margin-left: 8px;
     opacity: .75;
@@ -121,7 +125,7 @@ a {
 
 }
 
-.form-container .submit-btn {
+.form-container .form-btn {
     display: inline-block;
     width: 99px;
     height: 44px;
@@ -133,7 +137,7 @@ a {
     cursor: pointer;
 }
 
-.form-container .submit-btn:hover {
+.form-container .form-btn:hover {
     opacity: 0.8;
 }
 
@@ -149,15 +153,27 @@ a {
     color: rgba(0, 0, 0, .5);
 }
 
+.footer-info .interval {
+    margin: 0 5px;
+}
+
 .page-footer .footer-info a {
     color: rgba(0, 0, 0, .5);
 }
 
-.page-footer .footer-info-top a {
+.page-footer .footer-info-top .sogou-inputting {
     color: rgba(0, 0, 0, .7);
 }
 
-.page-footer .footer-info-top a i {
+.page-footer .footer-info-top .sogou-browser {
+    color: rgba(0, 0, 0, .7);
+}
+
+.page-footer .footer-info-top .sogou-navigation {
+    color: rgba(0, 0, 0, .7);
+}
+
+.page-footer .footer-info-top i {
     display: inline-block;
     position: relative;
     width: 13px;
@@ -167,11 +183,11 @@ a {
     background: url(../img/ico.gif) no-repeat;
 }
 
-.page-footer .footer-info-top a .i-second {
+.page-footer .footer-info-top .browser {
     background-position: 0 -29px;
 }
 
-.page-footer .footer-info-top a .i-last {
+.page-footer .footer-info-top .navigation {
     background-position: 0 -57px;
 }
 
@@ -188,11 +204,11 @@ a {
 }
 
 
-.page-footer .a-last {
+.page-footer .Security {
     position: relative;
 }
 
-.page-footer .older {
+.page-footer .Security-older {
     position: absolute;
     top: -25px;
     right: -90px;
@@ -205,12 +221,12 @@ a {
     margin: 0;
 }
 
-.page-footer .pb {
+.page-footer .Security-badge {
     display: inline-block;
     position: relative;
     width: 13px;
     height: 14px;
-    top: 2px;
+    top: 3px;
     margin: 0;
     background: url(../img/wangan.png) no-repeat;
 }
