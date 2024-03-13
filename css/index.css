@@ -16,7 +16,7 @@ a {
     text-decoration: none;
 }
 
-.header-top {
+.header-left {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,18 +24,18 @@ a {
     padding-left: 10px;
 }
 
-.header-top .header-top-item {
+.header-left .header-left-item {
     font-size: 13px;
     font-weight: 400;
     color: rgba(0, 0, 0, .75);
     margin-left: 20px;
 }
 
-.header-top .header-top-item-more {
+.header-left .header-left-more {
     position: relative;
 }
 
-.header-top .header-top-item-more-arr {
+.header-left .more-arr {
     display: inline-block;
     position: absolute;
     top: 6px;
@@ -48,21 +48,21 @@ a {
     transition: all 0.3s;
 }
 
-.header-top .header-top-item:hover {
+.header-left .header-left-item:hover {
     color: #ff5a34;
 }
 
-.header-top .header-top-item-more:hover .header-top-item-more-arr {
+.header-left .header-left-more:hover .header-left-item-more-arr {
     border-top: 4px solid #ff5a34;
     transform: rotate(180deg);
 }
 
-.header-top .header-top-item-webpage {
+.header-left .header-left-webpage {
     color: #ff5a34;
 }
 
 
-.header-user {
+.header-right {
     position: absolute;
     right: 0;
     top: 0;
@@ -71,20 +71,11 @@ a {
     text-align: right;
 }
 
-.header-user .header-user-item-temperature {
+.header-right .content-temperature {
     padding-left: 25px;
 }
 
-.header-user .header-user-weather {
-    position: relative;
-    width: 16px;
-    height: 16px;
-    top: -15px;
-    left: 63px;
-
-}
-
-.header-user .header-user-item-line {
+.header-right .content-line {
     display: inline-block;
     position: relative;
     top: 2px;
@@ -96,15 +87,23 @@ a {
     overflow: hidden;
 }
 
-.header-user-item-Location,
-.header-user-item-temperature {
+.content-Location,
+.content-temperature {
     color: rgba(0, 0, 0, .75);
 }
 
-.header-user .header-user-item-accessibility {
+.header-right .content-accessibility {
     color: #000;
     margin-left: 8px;
     opacity: .75;
+}
+
+.header-right .header-right-weather {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    top: -15px;
+    left: 63px;
 }
 
 .page-mainer {
@@ -113,12 +112,12 @@ a {
     margin: 200px;
 }
 
-.page-mainer .page-mainer-container {
+.page-mainer .mainer-form {
     display: flex;
     justify-content: center;
 }
 
-.page-mainer-container .page-mainer-container-search {
+.mainer-form .form-search {
     display: inline-block;
     width: 489px;
     height: 42px;
@@ -130,7 +129,7 @@ a {
 
 }
 
-.page-mainer-container .page-mainer-container-btn {
+.mainer-form .form-btn {
     display: inline-block;
     width: 99px;
     height: 44px;
@@ -142,7 +141,7 @@ a {
     cursor: pointer;
 }
 
-.page-mainer-container .page-mainer-container-btn:hover {
+.mainer-form .form-btn:hover {
     opacity: 0.8;
 }
 
@@ -157,61 +156,63 @@ a {
     color: rgba(0, 0, 0, .5);
 }
 
-.footer-info .footer-info-interval {
+.footer-info .info-interval {
     margin: 0 5px;
 }
 
-.page-footer .footer-info-item {
+.page-footer .info-item {
     color: rgba(0, 0, 0, .5);
 }
 
-.page-footer .footer-info-item:hover {
+.page-footer .info-item:hover {
     color: rgba(0, 0, 0, .9);
 }
 
-.footer-info-inputting,
-.footer-info-browser,
-.footer-info-navigation {
+.info-inputting,
+.info-browser,
+.info-navigation {
     color: rgba(0, 0, 0, .7);
 }
 
-.footer-info-inputting:hover,
-.footer-info-browser:hover,
-.footer-info-navigation:hover {
+.info-inputting:hover,
+.info-browser:hover,
+.info-navigation:hover {
     color: rgba(0, 0, 0, .9);
 }
 
-.icon {
+.info-container::before {
     display: inline-block;
     position: relative;
+    content: "";
     width: 13px;
     height: 14px;
     top: 2px;
+    left: 0;
     margin: 4px 5px 0 0;
     background: url(../img/ico.gif) no-repeat;
 }
 
-.icon-browser {
+.info-browser::before {
     background-position: 0 -29px;
 }
 
-.icon-navigation {
+.info-navigation::before {
     background-position: 0 -57px;
 }
 
-.footer-info-inputting:hover .icon-inputting {
+.info-inputting:hover .info-inputting::before {
     background-position: 0 -15px;
 }
 
-.footer-info-browser:hover .icon-browser {
+.info-browser:hover .info-browser::before {
     background-position: 0 -43px;
 }
 
-.footer-info-navigation:hover .icon-navigation {
+.info-navigation:hover .info-navigation::before {
     background-position: 0 -71px;
 }
 
-.page-footer .footer-info-line {
+.page-footer .info-line {
     display: inline-block;
     position: relative;
     top: 2px;
@@ -224,7 +225,7 @@ a {
 }
 
 
-.page-footer .footer-info-item-security {
+.page-footer .item-security {
     position: relative;
 }
 
